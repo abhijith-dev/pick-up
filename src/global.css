@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+    @apply w-32 h-32 bg-box border-[0.5px] border-border cursor-pointer flex justify-center items-center;
+}
+
+.scale-animation:hover {
+   transform: scale(1.05);
+   transition: all 300ms ease-in-out;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.flip-animation{
+    position: relative;
+    animation: flip-box 650ms forwards ease-in-out;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+@keyframes flip-box {
+    from{
+        transform: rotateY(360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
